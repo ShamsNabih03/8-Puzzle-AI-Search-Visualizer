@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+html, body, [class*="css"], [data-testid="stApp"] {font-family: 'Nunito', sans-serif;}
+[data-testid="stAppViewContainer"] {background: linear-gradient(160deg,#53afe8 0%,#237aae 40%,#10395f 100%); color:#f6fcff;}
+[data-testid="stHeader"] {background:transparent;}
+.block-container {max-width:830px;padding-top:2rem;padding-bottom:4rem;}
+.hero-kicker {text-align:center;letter-spacing:.24em;font-weight:900;color:#b5efff;font-size:.8rem;}
+.hero-title {text-align:center;color:white;font-size:3.25rem;font-weight:900;letter-spacing:-.04em;margin:0 0 .3rem!important;text-shadow:0 6px 14px #07335455;}
+.hero-subtitle {text-align:center;color:#dbf5ff;font-size:.99rem;margin:0 auto 2rem;max-width:600px;}
+.section-label {color:#d1f3ff;font-size:.75rem;letter-spacing:.17em;font-weight:900;margin:1.6rem 0 .55rem;}
+[data-testid="stVerticalBlockBorderWrapper"] > div {background:rgba(11,45,78,.45);border-color:#6bbce478!important;border-radius:20px!important;box-shadow:0 12px 30px #00294a26;}
+[data-testid="stWidgetLabel"] p, .stSelectbox label p, .stTextInput label p {color:#e4f6ff!important;font-weight:700;}
+[data-testid="stTextInput"] input {background:#ebf9ff;color:#164666;border-radius:10px;}
+[data-testid="stSelectbox"] > div > div {background:#f1fbff;color:#123c5d;border-radius:10px;}
+.stButton button, .stDownloadButton button {border-radius:11px!important;background:#1b4268!important;color:white!important;border:1px solid #83d5f777!important;font-weight:800!important;box-shadow:0 4px 12px #02234039;}
+.stButton button[kind="primary"] {background:#61d6f3!important;color:#103a60!important;border:1px solid #a0eeff!important;font-size:1.05rem!important;}
+.stButton button:disabled {opacity:.4!important;}
+.board-shell {border-radius:24px;background:rgba(10,47,80,.66);max-width:410px;margin:0 auto;padding:30px;box-shadow:0 17px 35px #052b4b55,inset 0 2px 2px #c3faff25;}
+.puzzle {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;aspect-ratio:1;}
+.tile {background:linear-gradient(145deg,#8eeaff 0%,#58cef1 100%);border-radius:13px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:clamp(2rem,5vw,3.5rem);color:#fff;text-shadow:0 3px 8px #1876a85e;box-shadow:0 5px 0 #278ab9,0 10px 16px #051f3733,inset 0 2px 1px #fff7;}
+.tile.blank {background:rgba(3,33,66,.5);box-shadow:inset 0 4px 12px #001e3f88;border:2px dashed #65a8ca88;}
+.step-label{text-align:center;color:#ddf7ff;font-size:.92rem;margin:1rem 0;}
+[data-testid="stMetric"]{background:rgba(8,39,73,.65);border-radius:14px;padding:10px;text-align:center;border:1px solid #8de4ff45;}
+[data-testid="stMetricLabel"] {justify-content:center;color:#e2f5ff!important;}
+[data-testid="stMetricValue"] {color:#fff;font-size:1.2rem!important;justify-content:center;}
+[data-testid="stExpander"]{background:rgba(9,46,79,.4);border-radius:12px;}
+.footer-note{text-align:center;color:#b5ddf3;font-size:.78rem;margin-top:2.5rem;}
+@media(max-width:600px){.hero-title{font-size:2.5rem}.board-shell{padding:18px}.puzzle{gap:8px}.block-container{padding-left:1rem;padding-right:1rem}.tile{border-radius:9px}}
