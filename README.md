@@ -1,8 +1,9 @@
 # 8-Puzzle AI Search Visualizer
 
-Interactive Python/Streamlit 8-puzzle game. It currently includes **BFS**, **DFS** and **IDDFS**. A* Manhattan and Euclidean will be added by teammates.
+Interactive Python/Streamlit 8-puzzle game. It includes **BFS**, **DFS**, **IDDFS**, **A\* Manhattan** and **A\* Euclidean**.
 
 ## Run locally (recommended)
+
 1. Install Python 3.10+ and VS Code.
 2. Open this project folder in a terminal.
 3. Install dependencies: `pip install -r requirements.txt`
@@ -10,6 +11,7 @@ Interactive Python/Streamlit 8-puzzle game. It currently includes **BFS**, **DFS
 5. The web app opens in your browser.
 
 ## Features
+
 - Blue-themed puzzle visualization, based on the project design direction
 - Input a state; shuffle to a guaranteed solvable state; reset
 - BFS/DFS/IDDFS algorithm selector
@@ -19,6 +21,7 @@ Interactive Python/Streamlit 8-puzzle game. It currently includes **BFS**, **DFS
 - Unsolvable-state validation and solver-path validation
 
 ## Teammate integration instructions
+
 Place any new algorithm in `algorithms.py` or import it from another file. It must accept a puzzle tuple and return `(moves, expanded, elapsed_seconds, search_depth)`, where `moves` is a list of blank directions (`'Up'`, `'Down'`, `'Left'`, `'Right'`). Return `None` for `moves` if no solution is found.
 
 Add to `ALGORITHMS` in `algorithms.py`, for example:
@@ -38,6 +41,7 @@ ALGORITHMS = {
 No changes to the application selector or statistics panel should be needed.
 
 ## Notes for report
+
 - Goal is `(0,1,2,3,4,5,6,7,8)`.
 - Each blank move costs 1.
 - Move order is Up, Down, Left, Right.
@@ -50,4 +54,5 @@ No changes to the application selector or statistics panel should be needed.
 - `Search depth` in the app means the depth of the returned goal, not maximum frontier depth.
 
 ## Test quickly
+
 Run `python test_algorithms.py`.
