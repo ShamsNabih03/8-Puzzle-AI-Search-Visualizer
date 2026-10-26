@@ -47,7 +47,7 @@ def puzzle_html(board, small=False):
 
 st.markdown('<div class="hero-kicker">AI SEARCH VISUALIZER</div>', unsafe_allow_html=True)
 st.markdown('<h1 class="hero-title">8 Puzzle Solver</h1>', unsafe_allow_html=True)
-st.markdown('<div class="hero-subtitle">Explore the puzzle with Breadth-First, Depth-First and Iterative Deepening Search</div>', unsafe_allow_html=True)
+st.markdown('<div class="hero-subtitle">Explore the puzzle with Breadth-First, Depth-First, Iterative Deepening and A* Search</div>', unsafe_allow_html=True)
 
 def set_state_action():
     try:
@@ -120,7 +120,7 @@ if play.button('▶ Play all', use_container_width=True, disabled=solution is No
 
 st.markdown('<div class="section-label">SEARCH CONTROLS</div>', unsafe_allow_html=True)
 with st.container(border=True):
-    selected = st.selectbox('Search algorithm', list(ALGORITHMS), help='A* methods can be added here by your teammates later.')
+    selected = st.selectbox('Search algorithm', list(ALGORITHMS), help='BFS, DFS and IDDFS are uninformed. A* is informed and uses the Manhattan or Euclidean heuristic.')
     if selected == 'IDDFS':
         st.caption('IDDFS repeats depth-limited DFS. Hard puzzles can take a long time.')
         max_limit = st.slider('Maximum IDDFS depth', 3, 40, 31)
@@ -168,6 +168,7 @@ with st.expander('Learn about the algorithms'):
     st.markdown('**BFS:** FIFO queue. Finds the minimum-move solution for unit-cost puzzles.\n\n'
                 '**DFS:** LIFO stack. Explores one route deeply; does not guarantee the shortest solution.\n\n'
                 '**IDDFS:** Repeats depth-limited DFS. Finds minimum moves with a sufficient depth limit; revisits states across iterations.\n\n'
+                '**A\\* Manhattan:** Min-heap ordered by f(n) = g(n) + h(n), where h is the sum of the horizontal and vertical distances of each tile from its goal cell. Optimal, and expands the fewest nodes here.\n\n'
+                '**A\\* Euclidean:** The same A* search, but h is the sum of straight-line distances. Also optimal, but a looser estimate, so it expands more nodes than Manhattan.\n\n'
                 '**Movement order:** Up, Down, Left, Right (directions of the blank tile).')
 
-st.markdown('<div class="footer-note">Alexandria University · Artificial Intelligence · Assignment 1</div>', unsafe_allow_html=True)
